@@ -33,16 +33,3 @@ Add runtime secrets to `.env.local` at the project root. Typical variables you m
 
 Do not commit `.env.local` to source control.
 
-## Screenshot placeholder
-
-Place a UI screenshot at `public/screenshot.png` and it will render in the README; example markdown:
-
-![OpenSight UI](public/screenshot.png)
-
-If you want, I can add response examples per endpoint, create a `.env.local.example`, or add a small demo screenshot — tell me which and I'll add it.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
