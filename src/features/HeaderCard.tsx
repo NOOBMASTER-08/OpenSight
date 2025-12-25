@@ -55,8 +55,8 @@ export default function HeaderCard({ domain }: { domain: string }) {
     score >= 40 ? 'bg-orange-500' :
     'bg-red-500';
 
-  const renderBadge = (label: string, color: string) => (
-    <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${color} mr-2 mb-2`}>{label}</span>
+  const renderBadge = (label: string, color: string, k?: string | number) => (
+    <span key={k} className={`px-2 py-0.5 rounded-full text-xs font-semibold ${color} mr-2 mb-2`}>{label}</span>
   );
 
   return (
@@ -76,7 +76,7 @@ export default function HeaderCard({ domain }: { domain: string }) {
       <div className="mb-4">
         <h3 className="font-semibold text-green-700 mb-2">Present</h3>
         <div className="flex flex-wrap">
-          {present.length ? present.map(h => renderBadge(h, 'bg-green-100 text-green-800')) : <span className="text-zinc-400">None</span>}
+          {present.length ? present.map((h, key) => renderBadge(h, 'bg-green-100 text-green-800', key)) : <span className="text-zinc-400">None</span>}
         </div>
       </div>
 
@@ -84,7 +84,7 @@ export default function HeaderCard({ domain }: { domain: string }) {
       <div className="mb-4">
         <h3 className="font-semibold text-red-600 mb-2">Missing</h3>
         <div className="flex flex-wrap">
-          {missing.length ? missing.map(h => renderBadge(h, 'bg-red-100 text-red-800')) : <span className="text-zinc-400">None</span>}
+          {missing.length ? missing.map((h, key) => renderBadge(h, 'bg-red-100 text-red-800', key)) : <span className="text-zinc-400">None</span>}
         </div>
       </div>
 
@@ -93,7 +93,7 @@ export default function HeaderCard({ domain }: { domain: string }) {
         <div>
           <h3 className="font-semibold text-orange-600 mb-2">Warnings</h3>
           <div className="flex flex-wrap">
-            {warnings.map((w, i) => renderBadge(w, 'bg-orange-100 text-orange-800'))}
+            {warnings.map((w, key) => renderBadge(w, 'bg-orange-100 text-orange-800', key))}
           </div>
         </div>
       )}
