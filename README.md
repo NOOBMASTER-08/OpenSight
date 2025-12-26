@@ -1,5 +1,8 @@
 # OpenSight
 OpenSight is a lightweight reconnaissance toolkit implemented as a Next.js application. It provides a small web UI and API routes for common domain footprinting and discovery tasks.
+
+<a href="https://open-sight-six.vercel.app/" target="_blank"><img width="557" height="352" alt="image" src="https://github.com/user-attachments/assets/5799a471-ae2e-4e7c-a7cd-4bc4c6d5972a" /></a>
+
 ## Features
 - Domain → IP lookups
 - Subdomain discovery
